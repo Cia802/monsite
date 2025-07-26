@@ -1,0 +1,1242 @@
+@font-face
+{
+	font-family: "Calistoga";
+	src: url("/fonts/calistoga/calistoga.ttf") format("TrueType");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap; /* Eviter texte invisible : https://web.dev/font-display/?utm_source=lighthouse&utm_medium=unknown#how-to-avoid-showing-invisible-text */
+}
+
+@font-face {
+	font-family: "Satisfy";
+	src: url("/fonts/satisfy/satisfy.ttf") format("TrueType");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Philosopher";
+	src: url("/fonts/philosopher/Philosopher-Regular.ttf") format("TrueType");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Général */
+
+body
+{
+	color: #181818;
+	font-family: "Philosopher", "Times New Roman", sans-serif;
+}
+
+#main_wrapper
+{
+	width: 980px;
+	margin: auto;
+}
+
+.vol
+{
+	position: absolute;
+	cursor: move;
+}
+
+#columbus_ship
+{
+	width: 107px;
+	top: 44px;
+	right: 77px;
+}
+#titanic
+{
+	width: 111px;
+	top: 33px;
+	left: 111px;
+}
+#sailboat
+{
+	width: 92px;
+	top: 11px;
+	right: 222px;
+}
+#toy_boat
+{
+	width: 120px;
+	bottom: 99px;
+	left: 0;
+}
+#steamboat
+{
+	width: 110px;
+	bottom: 111px;
+	right: 0;
+}
+
+
+/* <header> */
+
+header /* Il y a <header> dans <section> pour qcm.php */
+{
+	text-align: center;
+}
+
+h1
+{
+	font-family: "Calistoga", "Times New Roman", serif;
+}
+
+h1 a, h1 a:hover, h1 a:active /* Pas bouger */
+{
+	color: #800080;
+	text-decoration: underline;
+}
+
+header p
+{
+	font-size: 1.4em;
+}
+
+
+/* <nav> */
+
+nav
+{
+	margin-top: 40px;
+	background-color: #39444A;
+	font-family: "Calistoga", serif;
+}
+
+nav ul
+{
+	list-style-type: none;
+	padding: 35px 15px;
+	margin: 0;
+	
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+nav li
+{
+	flex: 1; /* Chaque élément prend la même place */
+	position: relative; /* Pour les notif. */
+}
+
+nav a
+{
+	display: inline-block;
+	padding: 5px 10px;
+	color: white;
+	font-size: 1.4em;
+	transition: 200ms;
+}
+
+nav a:hover, nav a:focus
+{
+	text-decoration: none;
+	color: blue;
+	background-color: white;
+}
+
+nav a:active
+{
+	color: fuchsia;
+}
+
+.notif
+{
+	position: absolute;
+	top: -7px;
+	right: -7px;
+	
+	color: white;
+	background-color: red;
+	font-size: .5em;
+	padding: 5px;
+	border-radius: 10px;
+	
+	transition: 200ms;
+}
+
+a:hover .notif
+{
+	color: red;
+	background-color: white;
+}
+
+.alerte
+{
+    color: white;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 4px;
+}
+
+
+/* <section> */
+
+section
+{
+	text-align: justify;
+	margin: 50px 0;
+}
+
+h3
+{
+	color: #400040;
+}
+
+section p
+{
+	text-indent: 40px;
+}
+
+li
+{
+	padding: 1px 0;
+}
+
+form p /* Pour les QCM et l'espace commentaires */
+{
+	text-indent: 0;
+}
+
+a
+{
+	color: darkblue;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+a:active
+{
+	color: fuchsia;
+}
+
+.lien_mort
+{
+	color: crimson;
+	font-style: italic;
+}
+
+.u
+{
+	text-decoration: underline;
+}
+
+input[disabled], textarea[disabled], fieldset[disabled] input, fieldset[disabled] textarea
+{
+	cursor: not-allowed;
+}
+
+.contain_table
+{
+	overflow: auto;
+}
+
+table
+{
+	text-align: left;
+	border-collapse: collapse;
+	margin: auto;
+}
+
+th, td
+{
+	border: 1px solid black;
+	padding: 5px 12px;
+}
+
+abbr
+{
+	cursor: help;
+	text-decoration: none;
+	border-bottom: 1px solid fuchsia;
+}
+
+abbr:hover
+{
+	background-color: yellow;
+	border-bottom: 0;
+}
+
+.hr
+{
+	align-items: center; /* Centre verticalement les enfants entre eux. */
+	display: flex; /* Active Flexbox. */
+	text-align: center; /* Garde le texte centré s'il passe sur plusieurs lignes ou si flexbox n'est pas supporté. */
+}
+
+.hr::before, .hr::after
+{
+	border-top: .0625em solid; /* La couleur est volontairement absente ; ainsi elle sera celle du texte. */
+	content: ""; /* Nécessaire pour afficher les pseudo-éléments */
+	flex: 1; /* Partage le reste de la largeur disponible. */
+	margin: 0 .5em; /* Espace les traits du texte. */
+}
+
+
+/* <footer> */
+
+footer
+{
+	text-align: center;
+	border-top: 2px solid black;
+	position: relative /* Décorations (.vol) */
+}
+
+#vers_caeim a
+{
+	color: white;
+	background-color: lightseagreen;
+}
+
+#vers_caeim a:hover
+{
+	color: lightseagreen;
+	background-color: unset;
+}
+
+#my_website
+{
+	margin-top: 30px;
+}
+
+#my_website a
+{
+	color: green;
+}
+
+#signature_concepteur
+{
+	font-style: italic;
+}
+
+#rs
+{
+	margin: 30px 0 0 0;
+}
+
+#rs a
+{
+	margin: 0 5px;
+}
+
+#rs a img
+{
+	border-radius: 9px;
+	transition: transform 700ms;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+#rs a:hover img
+{
+	transform: rotate(360deg);
+}
+
+#petits_liens a
+{
+	font-size: 0.7em;
+	color: black;
+}
+
+#petits_liens a:hover
+{
+	text-decoration: none;
+}
+
+
+/* index.php */
+
+#new_qcm table
+{
+	text-align: left;
+	margin: auto;
+}
+
+#new_qcm th
+{
+	position: sticky;
+	left: -2px;
+	background-image: linear-gradient(90deg, white 88%, transparent);
+}
+
+
+#old_qcm h3
+{
+	text-align: center;
+	margin-top: 45px;
+}
+
+#old_qcm ul
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+#old_qcm li
+{
+	margin: 5px 8px;
+}
+
+#rbr
+{
+	text-align: center;
+	background-color: pink;
+	padding: 15px 5px;
+	margin-bottom: 40px;
+}
+
+#rbr .input_title
+{
+	color: black;
+	font-size: 1.3em;
+}
+
+#rbr .input_title input
+{
+	background: rgba(0, 0, 0, 0);
+	border: 0;
+	font-weight: unset;
+	font-size: unset;
+	font-family: unset;
+	color: unset;
+	width: 46px;
+	text-align: unset;
+	padding: 0;
+	-moz-appearance: textfield;
+}
+
+#rbr .input_title input::-webkit-outer-spin-button, #rbr .input_title input::-webkit-inner-spin-button
+{
+	-webkit-appearance: none;
+    margin: 0;
+}
+
+
+#tab_repatition_rep
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 30px 0 10px 0;
+}
+
+#tab_repatition_rep div
+{
+	margin: 15px;
+	cursor: help;
+}
+
+#tab_repatition_rep strong
+{
+	font-size: 1.6em;
+}
+
+#rbr input[type="submit"]
+{
+	display: none;
+}
+
+#statistiques_qcm th
+{
+	color: white;
+	background-color: #555;
+}
+
+.stats_bonne_rep, .stats_mauvaise_rep
+{
+	transition: 200ms;
+}
+
+.stats_bonne_rep:hover
+{
+	color: white;
+	background-color: green;
+}
+
+.stats_mauvaise_rep:hover
+{
+	color: white;
+	background-color: red;
+}
+
+.citation q
+{
+	color: #4143E7;
+	font-family: "Satisfy", Sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.citation figcaption
+{
+	font-family: Cursive, Sans-serif;
+	font-weight: bold;
+	text-align: right;
+}
+
+/* format-pdf.php */
+
+#annales_pdf
+{
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+#annales_pdf li
+{
+	margin: 10px 25px; /* A modifier pour harmoniser la liste lors de modifications */
+}
+
+#annales_pdf li a
+{
+	color: red;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 85px;
+	justify-content: space-between;
+}
+
+#annales_pdf img
+{
+	width: 48px;
+}
+
+#liste_erreurs li
+{
+	transition: 300ms;
+}
+
+#liste_erreurs li:hover
+{
+	background-color: yellow;
+}
+
+
+/* qcm.php */
+
+.score
+{
+	text-indent: 0;
+	position: sticky;
+	top: 0;
+	text-align: center;
+	font-size: 1.4em;
+	color: white;
+	background-image: linear-gradient(to left, aqua, blue, aqua);
+	padding: 7px;
+	z-index: 500;
+}
+
+.q /* parents de <p> */
+{
+	color: rgb(68, 0, 170);
+	margin-top: 2.5em; /* Par défaut : p {margin: 1em 0;} donc plus au-dessus.*/
+}
+
+.q p /* Contiennent des images en position absolue */
+{
+	position: relative;
+}
+
+.q img
+{
+	vertical-align: top; /* pour petis écrans... */
+	max-width: 310px;
+    max-height: 170px;
+	
+	position: absolute;
+	top: 30px;
+	right: 10px;
+}
+
+.q a
+{
+	color: gray;
+}
+
+.q ol
+{
+	padding-left: 65px;
+}
+
+.q ol + p, .q p + p /* Les <p> qui suivent un <ol> ou <p> */
+{
+	margin-left: 29px;
+}
+
+.r, form[action*="correction"] table
+{
+	margin-left: 55px;
+}
+
+label img
+{
+	vertical-align: middle;
+}
+
+.submit_correction
+{
+	text-align: center;
+	margin-top: 40px;
+}
+
+form[action*="correction"] figure
+{
+	border: 1px solid black;
+	padding: 8px;
+	text-align: center;
+	overflow: auto;
+}
+
+form[action*="correction"] figure p, form[action*="correction"] figure ul, form[action*="correction"] figure ol
+{
+	text-align: justify;
+    margin: 20px; /* En attente d'une solution plus élégante (<p> anglais 2021) */
+}
+
+form[action*="correction"] figure img
+{
+	max-width: 100%;
+	max-height: 300px;
+}
+
+form[action*="correction"] figcaption
+{
+	font-weight: bold;
+}
+
+form[action*="correction"] figcaption:first-child
+{
+    border-bottom: 1px solid black;
+    margin-bottom: 25px;
+    padding-bottom: 8px;
+}
+
+form[action*="correction"] figcaption:last-child
+{
+    border-top: 1px solid black;
+    margin-top: 25px;
+    padding-top: 8px;
+}
+
+.flex_fig
+{
+    display: flex;
+    justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+
+/* commentaires.php */
+
+fieldset
+{
+	border: 2px solid black;
+	background-color: peachpuff;
+}
+
+legend
+{
+	font-weight: bold;
+}
+
+form textarea
+{
+	width: 100%;
+	box-sizing: border-box; /* Sinon mal centré */
+	max-width: 938px; /* Sécurité CSS (champ redimensionnable) */
+}
+
+#submit_comm
+{
+	text-align: right;
+}
+
+#contain_comments
+{
+	margin-top: 40px;
+}
+
+.message_total
+{
+	background-color: palegreen;
+	padding: 5px 15px;
+	margin: 15px 0;
+	position: relative;
+}
+
+.msg_admin
+{
+	background-color: lightskyblue;
+}
+
+.message_total p
+{
+	text-indent: 0;
+	word-break: break-word;
+}
+
+.ping, .ping_admin
+{
+	border-radius: 3px;
+}
+
+.ping
+{
+	color: maroon;
+}
+
+.ping:hover
+{
+	color: white;
+	background-color: maroon;
+}
+
+.ping_admin
+{
+	color: red;
+}
+
+.ping_admin:hover
+{
+	color: white;
+	background-color: red;
+}
+
+.etiquettes
+{
+	text-align: right;
+	margin: 5px 0;
+}
+
+.like
+{
+	cursor: help;
+	color: red; /* Vieux navigateurs */
+}
+
+.protect
+{
+	cursor: help;
+}
+
+/* Vue Admin */
+.suppr_msg, .like_msg, .protect_msg
+{
+	display: none;
+	position: absolute;
+	top: 5px;
+	width: 20px;
+}
+
+.suppr_msg
+{
+	right: 5px;
+}
+.suppr_msg a
+{
+	text-decoration: none;
+	color: red;
+	font-size: 1.2em;
+	display: flex;
+    justify-content: center;
+}
+.suppr_msg a:hover
+{
+	color: white;
+	background-color: red;
+}
+
+.like_msg
+{
+	right: 35px;
+}
+.like_msg a
+{
+	text-decoration: none;
+	color: black;
+	display: flex;
+    justify-content: center;
+}
+.like_msg a:hover
+{
+	background-color: white;
+}
+
+.protect_msg
+{
+	right: 65px;
+}
+.protect_msg a
+{
+	text-decoration: none;
+	display: flex;
+    justify-content: center;
+}
+.protect_msg a:hover
+{
+	background-color: white;
+}
+
+.ip_msg
+{
+	display: none;
+	position: absolute;
+	top: 9px;
+	right: 95px;
+	background-color: orange;
+}
+
+.message_total:hover .suppr_msg, .message_total:hover .like_msg, .message_total:hover .protect_msg, .message_total:hover .ip_msg
+{
+	display: block;
+}
+
+
+/* resultats.php */
+
+#carte_ac_fr
+{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+/* explications.php */
+
+#recherche_explication
+{
+	margin: 40px auto;
+	text-align: center;
+}
+
+#faux_form_expli, .txt_explication
+{
+	margin: 20px 0 35px 25px;
+	background-color: ghostwhite;
+}
+
+#faux_form_expli p
+{
+	text-indent: 0;
+}
+
+.fq
+{
+	color: #4400AA;
+}
+
+.txt_explication
+{
+	text-indent: 0;
+	font-family: Consolas, monospace;
+	padding-left: 10px;
+	border-left: 2px solid purple;
+	word-wrap: break-word; /* URL trop longues */
+}
+
+.expli_bonne_rep
+{
+	color: white;
+	background-color: green;
+}
+
+
+/* stats.php */
+
+.fig_stats_graph img
+{
+	width: 100%;
+}
+
+
+
+/* admin.php */
+
+.admin form, .admin table
+{
+	text-align: center;
+	margin: auto;
+}
+
+.date_ajout
+{
+	text-align: right;
+	font-style: italic;
+}
+
+.deco_admin
+{
+	text-align: center;
+}
+
+#derniers_ajouts img
+{
+	max-width: 250px;
+    max-height: 150px;
+}
+
+.bonne_rep
+{
+	background-color: yellow;
+}
+
+
+#gest_al a[href*="modif"]
+{
+	color: blue;
+}
+#gest_al a[href*="suppr"]
+{
+	color: red;
+}
+#gest_al .ajout_impossible a
+{
+	color: green;
+}
+
+.ajout_impossible
+{
+	background-color: silver;
+}
+
+
+#flex_tab
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#flex_tab table
+{
+	margin: 20px 10px;
+}
+
+.rank_1
+{
+	background-color: gold;
+	font-weight: bold;
+}
+.rank_2
+{
+	background-color: silver;
+}
+.rank_3
+{
+	background-color: sandybrown;
+}
+.total_u
+{
+	background-color: yellow;
+}
+
+.theme_actif
+{
+	color: red;
+	font-style: italic;
+}
+
+
+#gest_bl table, #gest_bl table input
+{
+	color: white;
+	font-family: Consolas, Monospace, sans-serif;
+}
+
+#gest_bl table caption
+{
+	color: #000;
+}
+
+#gest_bl th
+{
+	background-color: #111;
+}
+
+#gest_bl td
+{
+	background-color: #333;
+}
+
+#gest_bl td.ajout_impossible
+{
+	background-color: #444;
+}
+
+#gest_bl .edit_bl td
+{
+	background-color: #555;
+}
+
+#gest_bl input
+{
+	color: white;
+	background-color: #777;
+}
+#gest_bl input[type*="submit"]:hover
+{
+	background-color: #666;
+}
+#gest_bl input[type*="submit"]:active
+{
+	background-color: #888;
+}
+
+#gest_bl a[href*="modif"]
+{
+	color: #32CD32;
+}
+#gest_bl a[href*="suppr"]
+{
+	color: #CD32CD;
+}
+#gest_bl .ajout_impossible a
+{
+	color: #CDCD32;
+}
+
+
+#gest_bl .error
+{
+	color: red;
+	text-align: center;
+	font-style: italic;
+}
+
+
+
+
+
+/* journal.php */
+
+#historique_maj div
+{
+	padding: 10px;
+	margin: 15px 0;
+	background-color: #181181;
+	color: white;
+	border-radius: 6px;
+}
+
+
+/* Date MAJ */
+#historique_maj h3
+{
+	color: unset;
+}
+
+
+
+
+
+/* cours.php */
+
+mark
+{
+	background-color: unset;
+	font-weight: bold;
+	color: darkorange;
+}
+
+
+.propriete
+{
+	background-color: #FF9696;
+	border-radius: 8px;
+	box-shadow: 0 0 8px black;
+	padding: 20px;
+	width: 70%;
+	margin: 30px auto;
+}
+
+.propriete p
+{
+	text-indent: 0;
+}
+
+.formule
+{
+	text-align: center;
+}
+
+.formule span
+{
+	display: inline-block;
+	padding: 8px;
+	border: 2px solid #DD4A68;
+}
+
+.schema
+{
+	text-align: center;
+}
+
+.schema img
+{
+	margin: 20px 10px;
+	max-width: 500px;
+	max-height: 400px;
+}
+
+/* Figures sur même ligne */
+.flex_fig
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.flex_fig img
+{
+	max-width: 300px;
+}
+
+
+.front_chaud
+{
+	color: red;
+}
+
+.front_froid
+{
+	color: blue;
+}
+
+.occlusion
+{
+	color: purple;
+}
+
+/* Symboles carte TEMSI*/
+img[src*="temsi-"]
+{
+	width: 30px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+
+.very_cold {
+	color: purple;
+}
+.cold {
+	color: blue;
+}
+.hot {
+	color: orange;
+}
+.very_hot {
+	color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 1024px)
+{
+	#main_wrapper
+	{
+		width: auto;
+	}
+	
+	.vol
+	{
+		display: none;
+	}
+	
+	#flex_tab table
+	{
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 770px)
+{
+	.q img
+	{
+		position: static;
+		display: block;
+		margin: 20px auto;
+	}
+}
+
+@media all and (max-width: 755px)
+{
+	nav ul
+	{
+		flex-direction: column;
+		padding: 15px 5px;
+	}
+	
+	nav li
+	{
+		margin: 10px 0;
+	}
+	
+	.hr
+	{
+		display: block;
+		text-align: unset;
+	}
+
+	.hr::before, .hr::after
+	{
+		display: none;
+	}
+	
+	.r, form[action*="correction"] table
+	{
+		margin-left: 15px;
+	}
+	
+	/* Pour combler les 8px du padding de <body> sur mobile */
+	nav, aside, .score, .alerte
+	{
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+	
+	form[action*="correction"] figure img
+	{
+		width: 100%;
+	}
+}
+
+
+/* CANVAS */
+
+canvas
+{
+	display: block;
+	z-index: -1;
+	position: fixed;
+	top: 0;
+}
+

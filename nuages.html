@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  
+  <title>Les Nuages - Cours du C.I.A.</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBSG303T03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SBSG303T03');
+  </script>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style2.css" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="keywords" content="annales du C.I.A., mon C.I.A., certificat d'initiation à l'aéronautique, corrigé C.I.A., qcm C.I.A., cours C.I.A., correction epreuves bimer, diplôme  description, météorologie, navigation, réglementation." />
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <!-- See : https://ogp.me/ -->
+  <meta property="og:title" content="Tous les examens du C.I.A." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.postimg.cc/QxHDPVJg/avion.png" />
+  <meta property="og:description" content="Tous les examens du Certificat d'Initiation Aéronautique adaptées en QCM interactifs. Sujets et corrigés sont disponibles gratuitement." />
+  <meta property="og:locale" content="fr_FR" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7295467517416233" crossorigin="anonymous"></script>
+  <meta name="description" content="Pour s'entraîner, voici un Cours sur les Nuages - C.I.A." />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Importation de JQuery pour JavaScript : <canvas> -->
+  <style>
+  </style>
+  
+</head>
+
+<body>
+  
+  <div id="menu-container"></div>
+  
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
+      });
+  </script>
+  <section>
+    <h2 style="text-align: center;">Les Nuages</h2>
+    <h4 style="color: blueviolet;">Formation des nuages</h4>
+    <div style="text-align: center;"><img src="nuages1.jpg" width="300"></div>
+    <p>
+      Les nuages se forment lorsque de l'air humide s'élève dans l'atmosphère et se refroidit progressivement. Ce phénomène s'explique par la diminution de la pression avec l'altitude, qui provoque l'expansion de l’air et donc sa baisse de température. Lorsqu’il atteint sa température de rosée, la vapeur d’eau qu’il contient commence à se condenser sur de minuscules particules en suspension, appelées noyaux de condensation. Ce processus produit les gouttelettes d’eau ou les cristaux de glace qui composent les nuages.</p>
+      <h4 style="color: blueviolet;">Types de nuages et conditions associées</h4>
+      <p>La forme et le type de nuage dépendent principalement de l'altitude, de la stabilité de l’air et de la quantité d’humidité présente. Les cumulus, qui se forment dans un air instable, indiquent des mouvements verticaux importants. Lorsqu'ils s’étendent verticalement, ils peuvent évoluer en cumulonimbus, responsables d’orages, de turbulences sévères et de phénomènes dangereux comme la grêle ou le cisaillement de vent. Les stratus, eux, sont des nuages de basse couche qui se forment dans un air stable ; ils peuvent s'étendre horizontalement et provoquer des visibilités réduites, notamment sous forme de brouillard. Enfin, les cirrus, situés en haute altitude, sont composés uniquement de cristaux de glace et annoncent souvent l’approche d’un système frontal.</p>
+      <div style="text-align: center;"><img src="nuages2.jpg" width="300"></div>
+      <p>Ci-dessous 👇, la vidéo <strong>Numéro 1</strong> sur les nuages.</p>
+      
+        <div style="text-align: center;"><video width="300" controls poster="nuages25.png"><source src="/videos/nuages21.mp4" type="video/mp4">Votre navigateur ne prend pas en charge la vidéo HTML5.</video></div>
+        <h4 style="color: blueviolet;">Types de nuages et conditions associées</h4>
+        <p>Pour le pilote, les nuages sont des indicateurs visuels importants du type de masse d’air traversée. Ils permettent d’évaluer la stabilité de l’atmosphère, d’anticiper la présence de turbulences ou de zones de givrage, et d’adapter la trajectoire de vol en conséquence. En vol à vue, il est impératif de rester à l’écart des nuages pour respecter les conditions de visibilité requises. En vol aux instruments, la pénétration des nuages est fréquente, mais nécessite une préparation rigoureuse, notamment pour éviter les zones propices au givrage ou à la convection intense.</p>
+        <div style="text-align: center;"><video width="300" controls poster="nuages25.png"><source src="/videos/nuages22.mp4" type="video/mp4">Votre navigateur ne prend pas en charge la vidéo HTML5.</video></div>
+         <p>Ci-dessus 👆, la vidéo <strong>Numéro 2</strong> sur les nuages.</p>
+    </section>
+<div id="footer-container"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+<!-- Zone JavaScript -->
+
+<script>
+	(function() { // On utilise une IEF pour ne pas polluer l'espace global
+		var storage = {}; // Contient l'objet du div en cours de déplacement
+		function addEvent(element, event, func) { // Une fonction pour gérer les événements sous tous les navigateurs
+			if (element.attachEvent) {
+				element.attachEvent('on' + event, func);
+			}
+			else {
+				element.addEventListener(event, func, true);
+			}
+		}
+		
+		function init() { // La fonction d'initialisation
+			var elements = document.getElementsByTagName('img'), elementsLength = elements.length;
+			for (var i = 0 ; i < elementsLength ; i++) {
+				if (elements[i].className === 'vol') {
+					addEvent(elements[i], 'mousedown', function(e) { // Initialise le drag & drop
+						var s = storage;
+						s.target = e.target || event.srcElement;
+						s.offsetX = e.clientX - s.target.offsetLeft;
+						s.offsetY = e.clientY - s.target.offsetTop;
+					});
+					addEvent(elements[i], 'mouseup', function() { // Termine le drag & drop
+						storage = {};
+					});
+				}
+			}
+			
+			addEvent(document, 'mousemove', function(e) { // Permet le suivi du drag & drop
+				var target = storage.target;
+				if (target) {
+					target.style.top = e.clientY - storage.offsetY + 'px';
+					target.style.left = e.clientX - storage.offsetX + 'px';
+				}
+			});
+		}
+		
+		init(); // On initialise le code avec notre fonction toute prête
+	})();
+</script>
+			
+		</div>
+		
+	</body>
+	
+</html>

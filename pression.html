@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    
+    <head>
+        
+        <title>Pression atmosphérique - Cours au C.I.A.</title>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SBSG303T03"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SBSG303T03');
+</script>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="style2.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="keywords" content="annales du C.I.A., mon C.I.A., certificat d'initiation à l'aéronautique, corrigé C.I.A., qcm C.I.A., cours C.I.A., correction epreuves bimer, diplôme  description, météorologie, navigation, réglementation." />
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<!-- See : https://ogp.me/ -->
+<meta property="og:title" content="Tous les examens du C.I.A." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://i.postimg.cc/QxHDPVJg/avion.png" />
+<meta property="og:description" content="Tous les examens du Certificat d'Initiation Aéronautique adaptées en QCM interactifs. Sujets et corrigés sont disponibles gratuitement." />
+<meta property="og:locale" content="fr_FR" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7295467517416233" crossorigin="anonymous"></script>
+        <meta name="description" content="Pour s'entraîner, voici un Cours sur la Pression atmosphérique - C.I.A." />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Importation de JQuery pour JavaScript : <canvas> -->
+        <style>
+                    </style>
+        
+    </head>
+	
+	<body>
+		
+		<div id="menu-container"></div>
+
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-container').innerHTML = data;
+    });
+</script>
+
+			<section>
+			  <h2 style="color: #2E2D2D;">La Pression atmosphérique</h2>
+<p>La pression atmosphérique, la température, l'humidité et le vent permettent de définir l'état de l'atmosphère à un moment et à un endroit donné. La pression dépend de nombreux facteurs : altitude, lieu, nature du sol... Elle n’est donc pas uniforme. Pour mieux visualiser les zones de pression égale, on trace des cartes avec des lignes appelées <strong>isobares</strong>.</p>
+<div style="text-align: center;">
+<video width="300" controls poster="pression.png">
+  <source src="/videos/pression.mp4" type="video/mp4">
+  Votre navigateur ne prend pas en charge la vidéo HTML5.
+</video>
+</div>
+
+    <h3>La pression atmosphérique</h3>
+    <p>La pression atmosphérique correspond au poids de l’air qui exerce une force sur une surface. Au niveau de la mer, l'air pèse environ <strong>1,3 g/l</strong>, soit une pression de <strong>1 kg/cm²</strong>.<br>
+    Formule : Pression = h × ρ(Hg) × g</p>
+
+    <p>Elle diminue avec l’altitude. Plus on monte, moins il y a d’air au-dessus de nous, donc moins de pression. Sa variation n’est pas linéaire. On utilise la formule de Laplace pour estimer la différence de pression selon l'altitude :<br>
+    Z(P1 - P2) = 67,445 × Tm × log₁₀(P2 / P1)</p>
+
+    <p>L’unité utilisée en météo est l’hectopascal (<strong>hPa</strong>). On utilisait aussi le millibar (mb) ou le mmHg.<br>
+    Conversions : 1 mb = 1 hPa | 1 hPa = 0,75 mmHg ≈ 0,02953 inHg</p>
+
+    <h3>Atmosphère standard</h3>
+    <p>L'atmosphère standard (ISA) est un modèle théorique défini par l'OACI. Elle décrit les variations de température, pression et densité selon l'altitude. Elle ne prend pas en compte la vapeur d'eau, contrairement à l'atmosphère réelle.</p>
+
+    <h3>Atmosphère en aéronautique</h3>
+    <p>Ce modèle sert à étalonner les instruments de bord comme l’altimètre.<br>
+    Valeurs standard au niveau de la mer :<br>
+    - Pression : <strong>1013,25 hPa</strong> = <strong>760 mmHg</strong><br>
+    - Température : <strong>15 °C</strong><br>
+    - Humidité : <strong>0 %</strong><br>
+    - Densité : <strong>1,225 kg/m³</strong></p>
+
+    <p>Pression moyenne selon l’altitude :<br>
+    - <strong>850 hPa</strong> à <strong>1500 m</strong><br>
+    - <strong>700 hPa</strong> à <strong>3000 m</strong><br>
+    - <strong>500 hPa</strong> à <strong>5500 m</strong><br>
+    - <strong>265 hPa</strong> à <strong>10 000 m</strong><br>
+    - <strong>55 hPa</strong> à <strong>20 000 m</strong></p>
+
+    <h3>Atmosphère réelle</h3>
+    <p>L’altitude vraie d’un avion peut varier si l’atmosphère réelle diffère de l’atmosphère standard. En cas de pression faible ou de température froide, l’altitude vraie est plus basse que l’altitude indiquée.</p>
+
+    <p>Correction simplifiée à appliquer :<br>
+    ΔZv = ΔZi + (4 × ΔZi / 1000) × (Ts - Tstd)</p>
+
+    <h3>Influence de la pression et de la température</h3>
+    <p>L’altimètre suit les isobares (ex. 1013,2 hPa). Si la pression réelle diminue ou si la température est plus froide que standard, l’altitude vraie diminue.<br>
+    ➤ Vers une dépression : Zi constant → Zv diminue<br>
+    ➤ Vers le froid : Zi constant → Zv diminue<br>
+    <strong>Règle des 4D :</strong> Dépression = Dérive Droite = Danger</p>
+
+    <h3>Variation de la pression atmosphérique</h3>
+    <p><strong>Quotidienne :</strong> augmente le matin, baisse l’après-midi. Plus marquée près de l’équateur.</p>
+    <p><strong>Saisonnière :</strong> pression plus haute en été, plus basse en hiver (en montagne).</p>
+    <p><strong>Accidentelle :</strong> orages, cyclones, anticyclones : variations de quelques à plusieurs dizaines de hPa.</p>
+
+    <h3>Ligne isohypse et ligne isobare</h3>
+    <p><strong>Isohypse :</strong> ligne de même altitude géopotentielle sur une surface isobare.<br>
+    <strong>Isobare :</strong> ligne de même pression sur une surface quelconque.<br>
+    ➤ Elles se correspondent selon les surfaces utilisées.</p>
+
+    <h3>Représentation du champ de pression à la surface</h3>
+    <p>Les cartes météo montrent les isobares ramenées au niveau de la mer. Plus elles sont rapprochées, plus le vent est fort.</p>
+
+    <p><strong>Zones dépressionnaires :</strong><br>
+    ➤ Marquées en rouge ou noir : D (français), L (anglais), T (allemand)</p>
+
+    <p><strong>Zones anticycloniques :</strong><br>
+    ➤ Marquées en bleu ou noir : A (français), H (anglais/allemand)<br>
+    ➤ Espacement des lignes : tous les 5 hPa</p>
+    <div style="text-align: center;">
+    <img src="windy.png" width="300">
+    </div>
+    <p><em>Source de l'image: <a href="windy.com">Windy</a></em></p>
+				</section>
+				
+		<div id="footer-container"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+<!-- Zone JavaScript -->
+
+<script>
+	(function() { // On utilise une IEF pour ne pas polluer l'espace global
+		var storage = {}; // Contient l'objet du div en cours de déplacement
+		function addEvent(element, event, func) { // Une fonction pour gérer les événements sous tous les navigateurs
+			if (element.attachEvent) {
+				element.attachEvent('on' + event, func);
+			}
+			else {
+				element.addEventListener(event, func, true);
+			}
+		}
+		
+		function init() { // La fonction d'initialisation
+			var elements = document.getElementsByTagName('img'), elementsLength = elements.length;
+			for (var i = 0 ; i < elementsLength ; i++) {
+				if (elements[i].className === 'vol') {
+					addEvent(elements[i], 'mousedown', function(e) { // Initialise le drag & drop
+						var s = storage;
+						s.target = e.target || event.srcElement;
+						s.offsetX = e.clientX - s.target.offsetLeft;
+						s.offsetY = e.clientY - s.target.offsetTop;
+					});
+					addEvent(elements[i], 'mouseup', function() { // Termine le drag & drop
+						storage = {};
+					});
+				}
+			}
+			
+			addEvent(document, 'mousemove', function(e) { // Permet le suivi du drag & drop
+				var target = storage.target;
+				if (target) {
+					target.style.top = e.clientY - storage.offsetY + 'px';
+					target.style.left = e.clientX - storage.offsetX + 'px';
+				}
+			});
+		}
+		
+		init(); // On initialise le code avec notre fonction toute prête
+	})();
+</script>
+			
+		</div>
+		
+	</body>
+	
+</html>

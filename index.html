@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="slider.css">
 
 <meta name="viewport" content="width=device-width" />
-<meta name="keywords" content="annales du cia, mon cia, certificat d'initiation aéronautique, corrigé cia, qcm cia, cours bia, correction epreuves cia, examen du bia, formation collège, entrainement en ligne, test bia, avion, apprendre aviation, épreuves obligatoires, aérodynamique, mécanique, vol, connaissance, aéronefs, météorologie, navigation, réglementation, sécurité, histoire, espace, aéromodélisme, anglais, exercices" />
+<meta name="keywords" content="annales du cia, mon cia, certificat d'initiation aéronautique, corrigé cia, qcm cia, cours bia, correction epreuves cia, examen du bia, formation collège, entrainement en ligne, avion, apprendre aviation, épreuves obligatoires, aérodynamique, mécanique, vol, connaissance, aéronefs, météorologie, navigation, réglementation, sécurité, histoire, espace, aéromodélisme, anglais, exercices" />
 
 <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
@@ -91,7 +91,7 @@ C’est à partir de ce constat qu’est née cette initiative : créer un espac
 		<section>	
 				
 				
-				<p>C'est la rencontre de ces initiatives qui fut à l'origine, certes lointaine, de <a href="academie-des-aviateurs.com">L’académie des aviateurs</a>.</p>
+				<p>C'est la rencontre de ces initiatives qui fut à l'origine, certes lointaine, de <a href="https://academie-aviateurs.free.nf/">L’académie des aviateurs</a>.</p>
 				
 				<p>Dans cette académie,  les cours se passent en ligne pour initier les jeunes à l'aéronautique. Une équipe d'instructeurs qualifiés a été mise en place afin de fournir une formation de qualité aux jeunes apprenants!</p>
 				
@@ -221,7 +221,7 @@ C’est à partir de ce constat qu’est née cette initiative : créer un espac
 			<section>
 				<h2 class="hr">Généralités sur l'examen</h2>
 				
-				<p>Le Certificat d'Initiation Aéronautique est un document,délivré par nos soins, et qui vous sera remis à la fin de votre formation aéronautique à l' <a href="acadmie-des-aviateurs.com">Académie des aviateurs</a>, comprenant une partie théorique et une partie pratique pour sanctionner les acquis.</p>
+				<p>Le Certificat d'Initiation Aéronautique est un document,délivré par nos soins, et qui vous sera remis à la fin de votre formation aéronautique à l' <a href="https://academie-aviateurs.free.nf/">Académie des aviateurs</a>, comprenant une partie théorique et une partie pratique pour sanctionner les acquis.</p>
 				
 				<p>L'examen du C.I.A. se déroule chaque année vers la fin du mois de Mai. Il prend la forme d'un questionnaire à choix multiples (QCM) de 100 questions qui portent sur cinq épreuves. Chaque épreuve de l'examen compte 20 questions avec 4 réponses proposées. Il n'y a qu'une unique bonne réponse par question et 1 point est attribué à chacune d'entre elles. Dans le cas d'une abscence de réponse ou d'une mauvaise réponse, auncun point n'est attribué. Il existe des épreuves supplémentaires aux cinq obligatoires qui sont facultatives. Parmi celles proposées, le candidat peut choisir d'en traiter une seule lors de l'examen. Si ce choix est fait, seuls les points au-dessus de 10 points sont comptabilisés dans la note finale. La note maximale qui peut être obtenue est donc de 110/100.</p>
 			</section>
@@ -320,47 +320,6 @@ C’est à partir de ce constat qu’est née cette initiative : créer un espac
 </script>
 
 <!-- Zone JavaScript -->
-
-<script>
-	(function() { // On utilise une IEF pour ne pas polluer l'espace global
-		var storage = {}; // Contient l'objet du div en cours de déplacement
-		function addEvent(element, event, func) { // Une fonction pour gérer les événements sous tous les navigateurs
-			if (element.attachEvent) {
-				element.attachEvent('on' + event, func);
-			}
-			else {
-				element.addEventListener(event, func, true);
-			}
-		}
-		
-		function init() { // La fonction d'initialisation
-			var elements = document.getElementsByTagName('img'), elementsLength = elements.length;
-			for (var i = 0 ; i < elementsLength ; i++) {
-				if (elements[i].className === 'vol') {
-					addEvent(elements[i], 'mousedown', function(e) { // Initialise le drag & drop
-						var s = storage;
-						s.target = e.target || event.srcElement;
-						s.offsetX = e.clientX - s.target.offsetLeft;
-						s.offsetY = e.clientY - s.target.offsetTop;
-					});
-					addEvent(elements[i], 'mouseup', function() { // Termine le drag & drop
-						storage = {};
-					});
-				}
-			}
-			
-			addEvent(document, 'mousemove', function(e) { // Permet le suivi du drag & drop
-				var target = storage.target;
-				if (target) {
-					target.style.top = e.clientY - storage.offsetY + 'px';
-					target.style.left = e.clientX - storage.offsetX + 'px';
-				}
-			});
-		}
-		
-		init(); // On initialise le code avec notre fonction toute prête
-	})();
-</script>
 			
 		</div>
 		
